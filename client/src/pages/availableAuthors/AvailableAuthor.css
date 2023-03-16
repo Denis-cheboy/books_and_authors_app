@@ -1,0 +1,53 @@
+.authorWrapper{
+    max-height:92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.authorInnerWrapper{
+    display: flex;
+    margin-left: 60px;
+    padding:5px 0px;
+    height:300px;
+    width:100%;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+}
+.authorImageWrapper{
+    height:150px;
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+.authorImageWrapper>img{
+    height:100px;
+    width:100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.authorname{
+    margin-bottom: 10px;
+}
+.authorInfoHeader{
+    margin:10px 0px;
+}
+.authorInfo{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.authorAge{
+    margin:0px
+}
+.emailAddress{
+    display: flex;
+    gap:20px;
+}
+.authorAge{
+    display: flex;
+    gap:20px;
+}
+.totalBooks{
+    display: flex;
+    gap:20px;
+}

@@ -1,0 +1,30 @@
+.layout{
+    max-height:100vh;
+    position: relative;
+    background-color: #FDEFF9;
+    color:#395B64;
+    width:95%;
+    margin:0 auto;
+}
+.innerLayout{
+    display:flex;
+}
+.sidebar{
+    flex:3;
+    background-color:  #FDEFF9;
+    max-width: 400px;
+    min-height:88vh;
+    margin-top: 10px;
+    border-right: 1px solid rgb(226, 222, 222);
+}
+.outlet{
+    flex:6;
+}
+.rightSidebar{
+   flex:3;
+   margin-top: 5px;
+   background-color: #FDEFF9;
+    max-width: 400px;
+    min-height:88vh;
+    border-left:1px solid rgb(226, 222, 222);
+}

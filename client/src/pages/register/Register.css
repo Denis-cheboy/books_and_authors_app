@@ -1,0 +1,18 @@
+.registerTop{
+    position: relative;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.registerTop>img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.registerTop>.add{
+    position: absolute;
+    bottom:0;
+    right:2px;
+    color:red;
+}

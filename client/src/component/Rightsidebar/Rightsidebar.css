@@ -1,0 +1,61 @@
+.rightbarWrapper{
+    margin:25px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+.price{
+    margin-bottom: 40%;
+}
+.collaborators{
+    margin-bottom: 40%;
+}
+.rightbarWrapper>div{
+    padding:4px 6px;
+    cursor:pointer
+}
+.rightbarWrapper>.yourBooks:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.yourBooks:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.yourBooks:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.addBook:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.beReviewer:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.price:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.collaborators:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.yourFriends:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}
+.rightbarWrapper>.settings:hover{
+    background-color: black;
+    color:white;
+    border-radius: 4px;
+}

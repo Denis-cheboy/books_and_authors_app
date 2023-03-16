@@ -1,0 +1,21 @@
+.availableBookWrapper{
+    max-height:92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.individualBook{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow:1px 1px 3px 1px #f1cde7 ;
+    padding:10px;
+    cursor: pointer;
+}
+
+.coverWrapper>img{
+    height:100px;
+    width:100%;
+    object-fit: cover;
+    background-position: center;
+}

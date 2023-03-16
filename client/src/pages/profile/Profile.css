@@ -1,0 +1,11 @@
+.profileBooks>.availableHeader{
+    padding:30px 0px;
+}
+.authorInnerWrapper.profile{
+    border-bottom: none;
+}
+.profileWrapper{
+    height:92vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
