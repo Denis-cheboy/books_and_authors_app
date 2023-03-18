@@ -7,7 +7,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import { AppContextProvider } from './context/appContext';
 
 const client=new ApolloClient({
-  uri:"http://localhost:3500/graphql",
+  uri:"https://books-and-authors-api.onrender.com/graphql",
   cache:new InMemoryCache()
 })
 
