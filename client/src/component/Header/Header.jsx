@@ -57,7 +57,7 @@ const Header = () => {
             </div>
             <div className="rightLi">
               <img src={currentUser?.profilePic} alt="" />
-              <span>{currentUser.username}</span>
+              <span>{currentUser?.username}</span>
             </div>
        </ul>
     </div>
