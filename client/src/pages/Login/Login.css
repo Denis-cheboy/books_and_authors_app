@@ -1,0 +1,38 @@
+.loginWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  
+}
+.loginForm{
+    padding:20px 30px;
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    width:40%
+}
+.loginForm>input{
+    padding:10px 6px;
+    outline:none;
+}
+.header{
+    font-weight: bold;
+    font-size: 50px;
+}
+.loginForm>label{
+    font-size: 14px;
+}
+.loginForm>button{
+    padding:10px 0px;
+    width:30%;
+    background-color: blue;
+    border:none;
+    color:white;
+    cursor: pointer;
+}
+.loginWrapper>span{
+    color:grey;
+    font-size: 12px;
+}

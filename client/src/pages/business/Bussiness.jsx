@@ -1,5 +1,4 @@
 import React from 'react'
-import bot  from "../../asserts/botPhoto.jpg"
 import { GET_BOOKS } from '../../queries/ClientQueries'
 import { useQuery } from '@apollo/client'
 import "./Business.css"
@@ -13,7 +12,7 @@ const Bussiness = () => {
                     <div className="bookGenre">Genre: {book.genre}</div>
                     <div className="bookGenre">Price: ${book.price?book.price:10}</div>
                     <div className="coverWrapper">
-                        <img src={book.photo?book.photo:bot} alt="cover"/>
+                        <img src={book.photo?book.photo:undefined} alt="cover"/>
                     </div>
                     <div className="isFeatured">isFeatured: <span>{book.isFeatured?"true":"false"}</span></div>
                     <div className="authorName">Author Name: {book.author.username}</div>

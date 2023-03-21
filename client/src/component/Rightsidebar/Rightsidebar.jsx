@@ -3,7 +3,6 @@ import { useApp } from '../../context/appContext'
 import {Link} from "react-router-dom"
 import "./Rightsidebar.css"
 const Rightsidebar = () => {
-    const {setModal}=useApp()
   return (
     <div className="rightbarWrapper">
         <div className="yourBooks">
@@ -11,8 +10,10 @@ const Rightsidebar = () => {
               Your Books
             </Link>
         </div>
-        <div className="addBook" onClick={()=>setModal(true)}>
-            <span>Add Book</span>
+        <div className="addBook">
+            <Link to="/addBook" style={{textDecoration:"none",color:"inherit"}}>
+               Add Book
+            </Link>
         </div>
         <div className="beReviewer">
             <span>Review</span>

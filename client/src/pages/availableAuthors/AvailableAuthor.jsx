@@ -4,7 +4,9 @@ import bot from "../../asserts/botPhoto.jpg"
 import { GET_AUTHORS } from '../../queries/ClientQueries'
 import "./AvailableAuthor.css"
 const AvailableAuthor = () => {
-  const {data,loading}=useQuery(GET_AUTHORS)
+  const {data,loading,error}=useQuery(GET_AUTHORS)
+  if(error) return <span>Error occurred please check your network</span>
+
 
   return (
     <div className="authorWrapper">

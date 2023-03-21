@@ -7,14 +7,13 @@ import { GET_AUTHOR } from '../../queries/ClientQueries'
 
 const Profile = () => {
     const {id}=useParams()
-    const {data,isLoading,error}=useQuery(GET_AUTHOR,{variables:{id:id}})
-    const books=["business","love","sci-fi","technology","adventure"]
+    const {data,loading,error}=useQuery(GET_AUTHOR,{variables:{id:id}})
     if(error) return <span>Error occured durring fetch</span>
   return (
     <div className="profileWrapper">
          <div className="authorInnerWrapper profile">
           <div className="authorImageWrapper">
-            <img src={data?.author?.profilePic?data?.author.profilePic:bot} alt=""/>
+            <img src={data?.author?.profilePic?data.author.profilePic:bot} alt=""/>
             <span className="authorname">{data?.author.username}</span>
           </div>
           <div className="authorInfo">
@@ -34,18 +33,19 @@ const Profile = () => {
           </div>
           <div className="profileBooks">
             <h4 className="availableHeader" style={{margin:"30px 0px"}}>Books Available</h4>
-            {!data?.author?.books.length && <h3 style={{margin:"30px 0px"}}>NO AVAILABLE BOOKS</h3>}
+            {loading && <span>Loading books...</span>}
+            {data?.author?.books.length===0 && <h3 style={{margin:"30px 0px"}}>NO AVAILABLE BOOKS</h3>}
             {
                 data?.author.books?.map(book=>(
                     <div className="individualBook">
-                    <div className="bookName">Book Name: {book.name}</div>
-                    <div className="bookGenre">Genre: {book.genre}</div>
-                    <div className="bookGenre">Price: ${book.price?book.price:null}</div>
-                    <div className="coverWrapper">
-                        <img src={book.photo?book.photo:bot} alt="cover"/>
+                        <div className="bookName">Book Name: {book.name}</div>
+                        <div className="bookGenre">Genre: {book.genre}</div>
+                        <div className="bookGenre">Price: ${book.price?book.price:null}</div>
+                        <div className="coverWrapper">
+                            <img src={book.photo?book.photo:bot} alt="cover"/>
+                        </div>
+                        <div className="isFeatured">isFeatured: <span>{book.isFeatured?"true":"false"}</span></div>
                     </div>
-                    <div className="isFeatured">isFeatured: <span>{book.isFeatured?"true":"false"}</span></div>
-                </div>
                 )) 
             }
           </div>

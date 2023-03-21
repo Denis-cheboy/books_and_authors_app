@@ -25,20 +25,9 @@ const Home = () => {
                         </Link> 
                     </div>
                     <div className="famousBook">
-                        <div className="title">Featured Book</div>
-                        {
-                            author?.books?.map(book=>book.isFeatured ?(
-                                <div className="imageWrapper">
-                                    <img src={book.photo} alt="book" />
-                                    <div className="textWrapper">
-                                        <div className="text">
-                                            <span>{book.name}</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            ):
-                            (
+                           <div className="title">Featured Book</div>
+                            {
+                                author?.books?.length===0 ?
                                 <div className="imageWrapper noFeatured">
                                     <div className="textWrapper">
                                         <div className="text">
@@ -46,11 +35,35 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-
-                            )
-                            ).slice(0,1)
-                        }
-                    </div>
+                                :
+                                (author?.books?.map(book=>book.isFeatured?(
+                                        <div className="imageWrapper">
+                                            <img src={book.photo} alt="book" />
+                                            <div className="textWrapper">
+                                                <div className="text">
+                                                    <span>{book.name}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                )
+                                :
+                                (
+                                    <div className="imageWrapper noFeatured">
+                                        <div className="textWrapper">
+                                            <div className="text">
+                                                <span>No featured book</span>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                )
+                                ).slice(0,1))
+                                
+                                
+                            }
+                                               
+                    </div>   
                     <div className="authoursAge">
                         <span>Authors Age :</span>
                         <span className="age">{author.age}</span>

@@ -11,6 +11,7 @@ const Header = () => {
     setCurrentUser(data)
   },[])
 
+
   return (
     <div className='headerWrapper'>
        <ul className="ul">
@@ -38,27 +39,30 @@ const Header = () => {
                 </li>
                 {
                   !currentUser &&(
-                  <li className="li">
-                    <Link to="/register" style={{textDecoration:"none",color:"inherit"}}>
-                        Register
-                    </Link>
-                  </li>
-                )
-                }
-               {
-                  !currentUser &&(
-                  <li className="li">
-                    <Link to="/login" style={{textDecoration:"none",color:"inherit"}}>
-                        Login
-                    </Link>
-                  </li>
-                )
-                }
+                    <>
+                      <li className="li">
+                        <Link to="/register" style={{textDecoration:"none",color:"inherit"}}>
+                            Register
+                        </Link>
+                      </li>
+                      <li className="li">
+                        <Link to="/login" style={{textDecoration:"none",color:"inherit"}}>
+                            Login
+                        </Link>
+                      </li>
+                    </>
+                  )
+                }  
             </div>
-            <div className="rightLi">
-              <img src={currentUser?.profilePic} alt="" />
-              <span>{currentUser?.username}</span>
-            </div>
+            {
+              currentUser && 
+              (
+                <div className="rightLi">
+                  <img src={currentUser?.profilePic} alt="" />
+                  <span>{currentUser?.username}</span>
+                </div>
+              )
+            }
        </ul>
     </div>
   )

@@ -1,18 +1,59 @@
 .registerTop{
     position: relative;
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     border-radius: 50%;
+    margin: 12px;
 }
 .registerTop>img{
-    width:40px;
-    height: 40px;
+    width:50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
-.registerTop>.add{
+.registerTop>.label{
     position: absolute;
     bottom:0;
     right:2px;
-    color:red;
+    color:grey;
+    cursor: pointer;
+    z-index:5;
+    font-weight: bold;
 }
+.registerWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    
+  }
+  .form{
+      display: flex;
+      gap:20px;
+      flex-direction: column;
+      width:40%
+  }
+  .form>input{
+      padding:10px 6px;
+      outline:none;
+  }
+  .registerTitle{
+      font-weight: bold;
+      font-size: 40px;
+  }
+  .form>label{
+      font-size: 16px;
+  }
+  .form>button{
+      padding:10px 0px;
+      width:30%;
+      background-color: blue;
+      border:none;
+      color:white;
+      cursor: pointer;
+  }
+  .registerWrapper>span{
+      color:grey;
+      font-size: 12px;
+  }

@@ -9,7 +9,6 @@ const Layout=()=>{
     return (
         <div className="layout">
             <Header/>
-            <AddBook/>
             <div className="innerLayout">
                 <div className="sidebar">
                     <Sidebar/>

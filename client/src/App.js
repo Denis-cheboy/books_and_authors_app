@@ -3,6 +3,7 @@ import Register from "./pages/register/Register";
 import Home from "./pages/Home/Home";
 import Layout from "./component/Layout";
 import Login from "./pages/Login/Login";
+import AddBook from "./pages/AddBook/AddBook";
 import AvailableAuthor from "./pages/availableAuthors/AvailableAuthor";
 import AvailableBooks from "./pages/availableBooks/AvailableBooks";
 import Adventure from "./pages/adventure/Adventure";
@@ -30,6 +31,7 @@ function App() {
          <Route path="profile/:id" element={<Profile/>}/>
       </Route>
       <Route path="register" element={<Register/>}/>
+      <Route path="addBook" element={<AddBook/>}/>
       <Route path="login" element={<Login/>}/>
     </Routes>
   );
